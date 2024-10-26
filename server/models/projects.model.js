@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ProjectsSchema = new mongoose.Schema({
+const ProjectSchema = new mongoose.Schema({
     title: {
         type: String,
         trim: true,
@@ -38,12 +38,12 @@ const ProjectsSchema = new mongoose.Schema({
     },
     startDate: {
         type: Date,
-        required:"A start date is required"
+        required: "A start date is required",
     },
     endDate: {
         type: Date,
-        required:"An end date is required"
+        required: "An end date is required",
     },
 });
 
-export default mongoose.model("Contact", ContactSchema);
+export default mongoose.model("Project", ProjectSchema);

@@ -70,6 +70,11 @@ const ProjectCard = ({
                                 {startDate}
                             </Text>
                         )}
+                        {endDate && (
+                            <Text color={'gray.500'} fontSize={'sm'} mb={-2} mt={-5}>
+                                {endDate}
+                            </Text>
+                        )}
 
                         {technologies && (
                             <Text
@@ -161,6 +166,7 @@ ProjectCard.defaultProps = {
     short_description: '',
     long_description: '',
     date: '',
+    endDate: ''
 };
 
 export default ProjectCard;

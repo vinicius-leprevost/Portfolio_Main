@@ -15,7 +15,7 @@ mongoose.connect(config.mongoUri, {
 
 // Route for testing server
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome to User application." });
+    res.json({ message: "Welcome to Vinicius Portfolio Application Back-end." });
 });
 
 // Start the server

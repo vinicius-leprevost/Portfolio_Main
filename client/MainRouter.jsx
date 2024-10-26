@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom"
 import NavBar from "./components/NavBar.jsx"
-import ProjectCard from "./components/ProjectCard.jsx"
 import Home from "./src/pages/Home.jsx"
 import About from "./src/pages/About.jsx"
 import Projects from "./src/pages/Projects.jsx"

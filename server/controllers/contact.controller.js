@@ -7,7 +7,7 @@ const create = async (req, res) => {
     try {
         await contact.save();
         return res.status(200).json({
-            message: "Successfully signed up!",
+            message: "Successfully created!",
         });
     } catch (err) {
         return res.status(400).json({
@@ -18,7 +18,7 @@ const create = async (req, res) => {
 
 const list = async (req, res) => {
     try {
-        let contacts = await Contact.find().select('name email updated created');
+        let contacts = await Contact.find().select('name phone subject_type title description email updated created');
         res.json(contacts);
     } catch (err) {
         return res.status(400).json({
