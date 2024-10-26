@@ -7,6 +7,7 @@ import helmet from 'helmet';
 import contactRoutes from './routes/contact.routes.js';
 import projectsRoutes from './routes/projects.routes.js';
 import authRoutes from './routes/auth.routes.js';
+import usersRoutes from './routes/user.routes.js';
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.use(cors());
 // Routes
 app.use('/', contactRoutes);
 app.use('/', projectsRoutes);
+app.use('/', usersRoutes)
 app.use('/', authRoutes);
 
 // Error handling middleware
