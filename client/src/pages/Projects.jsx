@@ -18,10 +18,10 @@ export default function Projects() {
                 if (data && !data.error) {
                     setProjects(data);
                 } else {
-                    setError(data.error || "Failed to load projects.");
+                    setError(data.error || "Failed to load data.");
                 }
             } catch (err) {
-                setError("Failed to load projects.");
+                setError("API Failed to Fetch.");
                 console.error('Error:', err);
             } finally {
                 setLoading(false);
