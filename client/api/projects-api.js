@@ -1,6 +1,6 @@
 const create = async (project) => {
     try {
-        let response = await fetch('/api/projects/', {
+        let response = await fetch('http://localhost:3000/api/projects/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -16,7 +16,7 @@ const create = async (project) => {
 
 const list = async (signal) => {
     try {
-        let response = await fetch('/api/projects/', {
+        let response = await fetch('http://localhost:3000/api/projects/', {
             method: 'GET',
             signal: signal,
         });
@@ -28,7 +28,7 @@ const list = async (signal) => {
 
 const read = async (params, credentials, signal) => {
     try {
-        let response = await fetch('/api/projects/' + params.projectId, {
+        let response = await fetch('http://localhost:3000/api/projects/' + params.projectId, {
             method: 'GET',
             signal: signal,
             headers: {
@@ -45,7 +45,7 @@ const read = async (params, credentials, signal) => {
 
 const update = async (params, credentials, project) => {
     try {
-        let response = await fetch('/api/projects/' + params.projectId, {
+        let response = await fetch('http://localhost:3000/api/projects/' + params.projectId, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
@@ -62,7 +62,7 @@ const update = async (params, credentials, project) => {
 
 const remove = async (params, credentials) => {
     try {
-        let response = await fetch('/api/projects/' + params.projectId, {
+        let response = await fetch('http://localhost:3000/api/projects/' + params.projectId, {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json',
